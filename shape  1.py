@@ -110,21 +110,3 @@ def process_health_data_rf(raw_vitals_list):
     return json.dumps(result, indent=2)
    
    
-exampl
-sample_vitals = [90.0, 120.0, 95.0, 14.0, 36.5]
-print(process_health_data_rf(sample_vitals))
-
-output josn
-{
-  "status": "Risk",
-  "explanation": "Risk detected: contributing factors are Blood Pressure",
-  "risk_factors": [
-    {
-      "feature": "Blood Pressure",
-      "value": 170.0,
-      "impact": 0.529,
-      "direction": "increases risk"
-    }
-  ],
-  "warnings": []
-}
